@@ -1,6 +1,27 @@
 const { Pokemon, Poketipo } = require('../models');
 
 class PokemonController {
+    async getOne(req,res){
+        try {
+            const idSearch = Number(req.params.id);
+            const PokemonFind = await Pokemon.findAll({
+                where: {
+                    id: idSearch
+                },
+                include: [{
+                    model: Poketipo,
+                    as: "poketipo"
+                }]
+            });
+            if(!PokemonFind){
+                res.status(200).json({Mensagem: "Insira um ID Válido!!!"
+            })}else{
+                res.status(200).json({PokemonFind})
+            }
+        } catch (e) {
+            res.status(400).json({erro: e.message})            
+        }
+    }
     async getAll(req,res) {
         try {
             const pokemons = await Pokemon.findAll({

@@ -11,6 +11,7 @@ routes.get('/', (req,res) => {
 })
 //POKEMON ROUTES
 routes.get('/pokemons', PokemonController.getAll);
+routes.get('/pokemon/:id', PokemonController.getOne);
 routes.post('/pokemon', PokemonController.create);
 //POKETIPO ROUTES
 routes.get('/poketipos', PokeTipoController.getAll);

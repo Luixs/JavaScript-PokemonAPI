@@ -29,7 +29,7 @@ class PokeTipoController{
             }
             
         } catch (e) {
-            res.status(400).json({erro:e});
+            res.status(400).json({erro:e.message});
         }
     }
 }
