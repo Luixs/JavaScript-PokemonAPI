@@ -32,6 +32,15 @@ class PokeTipoController{
             res.status(400).json({erro:e.message});
         }
     }
+
+    async updated(req,res){
+        try {
+            const NewData = req.body
+            console.log(NewData);
+        } catch (error) {
+            res.status(400).json({'Erro': error.message})           
+        }
+    }
 }
 
 module.exports = new PokeTipoController();

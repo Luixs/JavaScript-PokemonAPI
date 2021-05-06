@@ -17,5 +17,6 @@ routes.post('/pokemon', PokemonController.create);
 routes.get('/poketipos', PokeTipoController.getAll);
 routes.get('/poketipo/:id', PokeTipoController.getOne);
 routes.post('/poketipo', PokeTipoController.create);
+routes.put('/poketipo', PokeTipoController.updated);
 
 module.exports = routes;
