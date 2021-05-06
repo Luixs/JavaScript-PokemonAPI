@@ -7,7 +7,7 @@ module.exports = {
         primaryKey: true,
         allowNull: false,
         autoIncrement: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER 
       },
       nome: {
         allowNull: false,
@@ -22,7 +22,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         references: {
           model: 'Poketipos',
-          key: id,
+          key: 'id',
           as: 'poketipoId'
         }
       },

@@ -31,7 +31,7 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    * await queryInterface.dropTable('Poketipos');
+    await queryInterface.dropTable('Poketipos');
     /**
      * Add reverting commands here.
      *

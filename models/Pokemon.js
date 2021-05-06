@@ -1,7 +1,7 @@
 module.exports = (sequelize, Sequelize) =>{
     const Pokemon = sequelize.define("Pokemon",{
-        nome: sequelize.STRING,
-        nivel: sequelize.INTEGER
+        nome: Sequelize.STRING,
+        nivel: Sequelize.INTEGER
     })
     Pokemon.associate = (models) =>{
         Pokemon.belongsTo(models.Poketipo, {
@@ -9,6 +9,6 @@ module.exports = (sequelize, Sequelize) =>{
             as: "poketipo"
         })
     }
-    
+    return Pokemon;        
 }
 

@@ -1,7 +1,7 @@
 
 module.exports = (sequelize, Sequelize) =>{
     const PokeTipo = sequelize.define("Poketipo", {
-        descricao: sequelize.STRING
+        descricao: Sequelize.STRING
     })
 
     PokeTipo.associate = (models)=>{
@@ -10,5 +10,6 @@ module.exports = (sequelize, Sequelize) =>{
             as: "poketipo"
         })
     }
+    return PokeTipo;
 }
 
